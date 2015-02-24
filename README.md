@@ -17,7 +17,9 @@
 
 Module to manage OpenSSH with focus on using augeas for configfile modifications
 to provide compatibility with upstream changes in this files.
+
 Puppetversion: > 2.6.2
+
 OS: RedHat
 
 ## Module Description
@@ -94,4 +96,4 @@ This is where you list OS compatibility, version compatibility, etc.
 
 ## Development
 
-If you like to cotribute, pull requests are welcome :-)
+If you like to contribute: pull requests are welcome :-)
