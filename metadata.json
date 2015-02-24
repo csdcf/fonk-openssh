@@ -1,0 +1,14 @@
+{
+  "name": "fonk-openssh",
+  "version": "0.1.0",
+  "author": "fonk",
+  "summary": "Module to manage OpenSSH",
+  "license": "Apache 2.0",
+  "source": "https://github.com/fonk/fonk-openssh",
+  "project_page": "https://github.com/fonk/fonk-openssh",
+  "issues_url": "https://github.com/fonk/fonk-openssh/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
