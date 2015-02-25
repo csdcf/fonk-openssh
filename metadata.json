@@ -1,6 +1,6 @@
 {
   "name": "fonk-openssh",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "author": "fonk",
   "summary": "Module to manage OpenSSH",
   "license": "Apache-2.0",
@@ -19,8 +19,8 @@
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "6.0",
-        "7.0"
+        "6",
+        "7"
       ]
     },
     {
