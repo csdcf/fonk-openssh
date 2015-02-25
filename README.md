@@ -20,7 +20,7 @@ to provide compatibility with upstream changes in this files.
 
 Puppetversion: > 2.6.2
 
-OS: RedHat
+OS: RedHat, Debian
 
 ## Module Description
 
@@ -90,9 +90,6 @@ class { 'openssh': }
 * `collecttag`: Keys with this tag will get collected. If 'false', keys won't get collected.
 
 ## Limitations
-
-Currently only RedHat compatible systems are supported
-This is where you list OS compatibility, version compatibility, etc.
 
 ## Development
 
