@@ -1,4 +1,5 @@
 # openssh
+[![Build Status](https://travis-ci.org/fonk/fonk-openssh.svg?branch=master)](https://travis-ci.org/fonk/fonk-openssh)
 
 #### Table of Contents
 
