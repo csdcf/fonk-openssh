@@ -1,21 +1,31 @@
 {
   "name": "fonk-openssh",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "fonk",
   "summary": "Module to manage OpenSSH",
   "license": "Apache-2.0",
   "source": "https://github.com/fonk/fonk-openssh",
   "project_page": "https://github.com/fonk/fonk-openssh",
   "issues_url": "https://github.com/fonk/fonk-openssh/issues",
-  "tags": ["openssh", "ssh", "hostkeys"],
+  "tags": [
+    "openssh",
+    "ssh",
+    "hostkeys"
+  ],
   "operatingsystem_support": [
     {
-    "operatingsystem":"RedHat",
-    "operatingsystemrelease":[ "6.0", "7.0" ]
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "6.0",
+        "7.0"
+      ]
     },
     {
-    "operatingsystem": "Debian",
-    "operatingsystemrelease": [ "6", "7" ]
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "6",
+        "7"
+      ]
     }
-   ]
+  ]
 }
