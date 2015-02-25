@@ -1,6 +1,6 @@
 {
   "name": "fonk-openssh",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "author": "fonk",
   "summary": "Module to manage OpenSSH",
   "license": "Apache-2.0",
