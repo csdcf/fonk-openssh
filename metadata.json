@@ -3,14 +3,19 @@
   "version": "0.1.1",
   "author": "fonk",
   "summary": "Module to manage OpenSSH",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "source": "https://github.com/fonk/fonk-openssh",
   "project_page": "https://github.com/fonk/fonk-openssh",
   "issues_url": "https://github.com/fonk/fonk-openssh/issues",
-  "dependencies": [
+  "tags": ["openssh", "ssh", "hostkeys"],
+  "operatingsystem_support": [
     {
-      "name": "puppetlabs-stdlib",
-      "version_requirement": ">= 1.0.0"
+    "operatingsystem":"RedHat",
+    "operatingsystemrelease":[ "6.0", "7.0" ]
+    },
+    {
+    "operatingsystem": "Debian",
+    "operatingsystemrelease": [ "6", "7" ]
     }
-  ]
+   ],
 }
