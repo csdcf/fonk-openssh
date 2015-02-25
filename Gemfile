@@ -9,12 +9,15 @@ group :development, :unit_tests do
   gem 'simplecov',               :require => false
   gem 'puppet_facts',            :require => false
   gem 'json',                    :require => false
-  gem 'puppet-blacksmith'
 end
 
 group :system_tests do
   gem 'beaker-rspec', :require => false
   gem 'pry'
+end
+
+group :publishing do
+  gem 'puppet-blacksmith'
 end
 
 if facterversion = ENV['FACTER_GEM_VERSION']
