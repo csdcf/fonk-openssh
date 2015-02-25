@@ -12,6 +12,7 @@
     "ssh",
     "hostkeys"
   ],
+  "dependencies": [],
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
