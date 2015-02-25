@@ -14,7 +14,7 @@ class openssh::params {
 
   # osfamily-specific parameters
   $packages = $::osfamily ? {
-    'RedHat' => 'openssh',
+    'RedHat' => [ 'openssh-server', 'openssh-clients' ],
     'Debian' => [ 'openssh-server', 'openssh-client' ],
     default  => '',
   }

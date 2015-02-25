@@ -3,9 +3,14 @@ describe 'openssh', :type => :class do
 
   context 'should change default and given parameters' do
     let (:facts) { {:osfamily => 'RedHat'} }
-    let (:params) { { :config => { 'foo' => 'bar' } } }
+    let (:params) { {
+      :config => {
+        'foo' => 'bar'
+      }
+    } }
     it do
       should contain_augeas('sshd_config').with({
+        :context => '/files/etc/ssh/sshd_config',
         :changes => [
           'set PermitRootLogin "no"',
           'set foo "bar"',
@@ -16,9 +21,16 @@ describe 'openssh', :type => :class do
 
   context 'should change given parameters and allow changing of default parameters' do
     let (:facts) { {:osfamily => 'RedHat'} }
-    let (:params) { { :config => { 'PermitRootLogin' => 'YES', 'foo' => 'bar' } } }
+    let (:params) { {
+      :sshd_config => '/foobar',
+      :config => {
+        'PermitRootLogin' => 'YES',
+        'foo' => 'bar'
+      }
+    } }
     it do
       should contain_augeas('sshd_config').with({
+        :context => '/files/foobar',
         :changes => [
           'set PermitRootLogin "YES"',
           'set foo "bar"',

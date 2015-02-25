@@ -18,7 +18,7 @@ class openssh::config {
   $config_array = split( chop( $separated_config ), ',')
 
   augeas { 'sshd_config':
-    context => "/files/${openssh::sshd_config}",
+    context => "/files${openssh::sshd_config}",
     changes => $config_array,
   }
 

@@ -4,7 +4,10 @@ describe 'openssh', :type => :class do
   context 'on RedHat systems with default parameters' do
     let (:facts) { {:osfamily => 'RedHat'} }
 
-    it { should contain_package('openssh').with_ensure('present') }
+    it do
+      should contain_package('openssh-server').with_ensure('present')
+      should contain_package('openssh-clients').with_ensure('present')
+    end
   end
 
 
