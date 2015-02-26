@@ -12,6 +12,17 @@ describe 'openssh' do
     }) }
   end
 
+  context 'should start the service on Debian systems' do
+    let (:facts) {{ :osfamily => 'Debian' }}
+
+    it { should contain_service('ssh').with({
+      :ensure     => 'running',
+      :enable     => 'true',
+      :hasstatus  => 'true',
+      :hasrestart => 'true',
+    }) }
+  end
+
   context 'should honor custom names' do
     let (:facts) {{ :osfamily => 'RedHat' }}
     let (:params) {{ :servicename => 'foo' }}
