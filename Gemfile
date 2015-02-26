@@ -2,22 +2,22 @@ source ENV['GEM_SOURCE'] || "https://rubygems.org"
 
 group :development, :unit_tests do
   gem 'rake',                    :require => false
-  gem 'rspec-core', '3.1.7',     :require => false
-  gem 'rspec-puppet', '~> 1.0',  :require => false
-  gem 'puppetlabs_spec_helper',  :require => false
-  gem 'puppet-lint',             :require => false
+  gem 'rspec-core',              :require => false
+  gem 'rspec-puppet',            :require => false, :git => 'https://github.com/logicminds/rspec-puppet'
+  gem 'puppetlabs_spec_helper',  :require => 'puppetlabs_spec_helper/rake_tasks'
+  gem 'puppet-lint',             :require => 'puppet-lint/tasks/puppet-lint'
   gem 'simplecov',               :require => false
   gem 'puppet_facts',            :require => false
   gem 'json',                    :require => false
 end
 
-group :system_tests do
+group :development, :system_tests do
   gem 'beaker-rspec', :require => false
-  gem 'pry'
+  gem 'pry', :require => false
 end
 
 if RUBY_VERSION != '1.8.7'
-  gem 'puppet-blacksmith'
+  gem 'puppet-blacksmith', :require => 'puppet_blacksmith/rake_tasks'
 end
 
 if facterversion = ENV['FACTER_GEM_VERSION']
