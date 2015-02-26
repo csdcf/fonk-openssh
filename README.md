@@ -57,6 +57,10 @@ to all hosts
     class { 'openssh': }
 
 ### Advanced usage
+Because the hash of the config-parameter gets passed comletely to augeas, you
+can use all options your augeas lens provides in the way your augeas lens
+specifies it. Here are some examples for that:
+
 Install packages, set some custom values, ensure service is running, export and
 collect no keys
 
