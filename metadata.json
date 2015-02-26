@@ -1,6 +1,6 @@
 {
   "name": "fonk-openssh",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "author": "fonk",
   "summary": "Module to manage OpenSSH",
   "license": "Apache-2.0",
@@ -38,7 +38,7 @@
     },
     {
       "name": "puppet",
-      "version_requirement": "2.6.3"
+      "version_requirement": "3.x"
     }
   ]
 }
