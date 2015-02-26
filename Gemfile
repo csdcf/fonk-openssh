@@ -16,7 +16,7 @@ group :system_tests do
   gem 'pry'
 end
 
-group :publishing do
+if RUBY_VERSION != '1.8.7'
   gem 'puppet-blacksmith'
 end
 
@@ -31,3 +31,4 @@ if puppetversion = ENV['PUPPET_GEM_VERSION']
 else
     gem 'puppet', :require => false
 end
+
