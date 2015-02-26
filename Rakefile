@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
-Bundler.require(:default, :development)
+Bundler.require(:default, :unit_tests, :system_tests)
 
 PuppetLint.configuration.send('disable_80chars')
 PuppetLint.configuration.send("disable_autoloader_layout")

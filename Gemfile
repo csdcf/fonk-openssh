@@ -1,6 +1,6 @@
 source ENV['GEM_SOURCE'] || "https://rubygems.org"
 
-group :development, :unit_tests do
+group :unit_tests do
   gem 'rake',                    :require => false
   gem 'rspec-core',              :require => false
   gem 'rspec-puppet',            :require => false, :git => 'https://github.com/logicminds/rspec-puppet'
@@ -11,7 +11,7 @@ group :development, :unit_tests do
   gem 'json',                    :require => false
 end
 
-group :development, :system_tests do
+group :system_tests do
   gem 'beaker-rspec', :require => false
   gem 'pry', :require => false
 end
