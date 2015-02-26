@@ -19,7 +19,7 @@
 Module to manage OpenSSH with focus on using augeas for configfile modifications
 to provide compatibility with upstream changes in this files.
 
-Puppetversion: > 2.6.2
+Puppetversion: >= 3.5.0
 
 OS: RedHat, Debian
 

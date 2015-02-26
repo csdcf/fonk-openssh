@@ -1,8 +1,8 @@
 {
   "name": "fonk-openssh",
-  "version": "0.1.12",
+  "version": "1.0.0",
   "author": "fonk",
-  "summary": "Module to manage OpenSSH",
+  "summary": "Module to manage OpenSSH with focus on using augeas",
   "license": "Apache-2.0",
   "source": "https://github.com/fonk/fonk-openssh",
   "project_page": "https://github.com/fonk/fonk-openssh",
@@ -34,11 +34,11 @@
   "requirements": [
     {
       "name": "pe",
-      "version_requirement": "3.x"
+      "version_requirement": ">=3.5.0"
     },
     {
       "name": "puppet",
-      "version_requirement": "3.x"
+      "version_requirement": ">=3.5.0"
     }
   ]
 }

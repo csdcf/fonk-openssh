@@ -33,4 +33,8 @@ class openssh (
   class { '::openssh::config': ; } ~>
   class { '::openssh::service': ; }
 
+  contain '::openssh::install'
+  contain '::openssh::config'
+  contain '::openssh::service'
+
 }
