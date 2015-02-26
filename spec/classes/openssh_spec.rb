@@ -13,3 +13,6 @@ describe 'openssh', :type => :class do
   end
 
 end
+
+# report code coverage
+at_exit { RSpec::Puppet::Coverage.report! }
