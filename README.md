@@ -42,15 +42,51 @@ To use spreading of hostkeys you will need a puppetdb-enabled puppetserver
 
 ### Beginning with openssh
 
-To begin using this module with default parameters, declare the class with `include openssh`
+To begin using this module with default parameters, declare the class with
+`include openssh`
 
-Any Puppet code that uses anything from the apt module requires that the core apt class be declared.
+Any Puppet code that uses anything from the apt module requires that the core
+apt class be declared.
 
 ## Usage
 
-```
-class { 'openssh': }
-```
+### Simple usage
+Install packages, set some defaults, ensure service is running, export all keys
+to all hosts
+
+    class { 'openssh': }
+
+### Advanced usage
+Install packages, set some custom values, ensure service is running, export and
+collect no keys
+
+    class { '::openssh':
+      config => {
+        'X11Forwarding'      => 'no',
+        'AllowTcpForwarding' => 'yes',
+        'Port'               => '222',
+      },
+      exporttag  => false,
+      collecttag => false,
+    }
+
+### Even more advanced usage
+Install packages, set two listening ports and special parameters for group "no-admin", ensure service is running, export
+keys with tag "customer\_hosts" and collect no keys
+
+    class { '::openssh':
+      config => {
+        'X11Forwarding' => 'no',
+        'AllowTcpForwarding' => 'yes',
+        'Port[1]'            => '222',
+        'Port[2]'            => '333',
+        'Match[1]/Condition/Group'          => 'no-admin',
+        'Match[1]/Settings/ChrootDirectory' => '/home',
+        'Match[1]/Settings/X11Forwarding'   => 'no',
+      },
+      exporttag  => 'customer_hosts',
+      collecttag => false,
+    }
 
 ## Reference
 
