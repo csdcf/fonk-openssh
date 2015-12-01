@@ -12,7 +12,7 @@ class openssh::config {
   $override)
 
   # build an array from the config-hash for the augeas resource
-  $separated_config = inline_template('<% merged_config.each do
+  $separated_config = inline_template('<% @merged_config.each do
   |name_and_options| -%>set <%= name_and_options[0] %> "<%= name_and_options[1]
   %>",<% end -%>')
   $config_array = split( chop( $separated_config ), ',')
