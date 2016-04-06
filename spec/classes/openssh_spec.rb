@@ -2,7 +2,11 @@ require 'spec_helper'
 describe 'openssh', :type => :class do
 
   context 'with defaults for all parameters on RedHat' do
-  let (:facts) { {:osfamily => 'RedHat'} }
+    let (:facts) {{
+      :osfamily => 'RedHat',
+      :ipaddress => '10.10.10.10',
+    }}
+
     it do
       should contain_class('openssh')
       should contain_class('openssh::params')

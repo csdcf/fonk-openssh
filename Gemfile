@@ -3,7 +3,7 @@ source ENV['GEM_SOURCE'] || "https://rubygems.org"
 group :unit_tests do
   gem 'rake',                    :require => false
   gem 'rspec-core',              :require => false
-  gem 'rspec-puppet',            :require => false, :git => 'https://github.com/logicminds/rspec-puppet'
+  gem 'rspec-puppet',            :require => false
   gem 'puppetlabs_spec_helper',  :require => 'puppetlabs_spec_helper/rake_tasks'
   gem 'puppet-lint',             :require => 'puppet-lint/tasks/puppet-lint'
   gem 'simplecov',               :require => false

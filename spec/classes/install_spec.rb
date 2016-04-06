@@ -2,7 +2,10 @@ require 'spec_helper'
 describe 'openssh', :type => :class do
 
   context 'on RedHat systems with default parameters' do
-    let (:facts) { {:osfamily => 'RedHat'} }
+    let (:facts) {{
+      :osfamily => 'RedHat',
+      :ipaddress => '10.10.10.10',
+    }}
 
     it do
       should contain_package('openssh-server').with_ensure('present')
@@ -12,7 +15,10 @@ describe 'openssh', :type => :class do
 
 
   context 'on Debian systems with default parameters' do
-    let (:facts) { {:osfamily => 'Debian'} }
+    let (:facts) {{
+      :osfamily => 'Debian',
+      :ipaddress => '10.10.10.10',
+    }}
 
     it do
       should contain_package('openssh-server').with_ensure('present')
@@ -22,7 +28,10 @@ describe 'openssh', :type => :class do
 
 
   context 'on RedHat systems with specific parameters' do
-    let (:facts) { {:osfamily => 'RedHat'} }
+    let (:facts) {{
+      :osfamily => 'RedHat',
+      :ipaddress => '10.10.10.10',
+    }}
     let (:params) {{
       :ensure   => 'latest',
       :packages => [ 'Foo', 'Bar' ],

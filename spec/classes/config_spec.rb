@@ -2,7 +2,10 @@ require 'spec_helper'
 describe 'openssh', :type => :class do
 
   context 'should change default and given parameters' do
-    let (:facts) { {:osfamily => 'RedHat'} }
+    let (:facts) {{
+      :osfamily => 'RedHat',
+      :ipaddress => '10.10.10.10',
+    }}
     let (:params) { {
       :config => {
         'foo' => 'bar'
@@ -20,7 +23,10 @@ describe 'openssh', :type => :class do
   end
 
   context 'should change given parameters and allow changing of default parameters' do
-    let (:facts) { {:osfamily => 'RedHat'} }
+    let (:facts) {{
+      :osfamily => 'RedHat',
+      :ipaddress => '10.10.10.10',
+    }}
     let (:params) { {
       :sshd_config => '/foobar',
       :config => {
