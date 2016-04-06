@@ -1,6 +1,6 @@
 {
   "name": "fonk-openssh",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "fonk",
   "summary": "Module to manage OpenSSH with focus on using augeas",
   "license": "Apache-2.0",
