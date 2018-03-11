@@ -1,3 +1,5 @@
+THIS REPOSITORY IS NO LONGER MAINTAINED - IF YOU LIKE TO TAKE CARE OF IT, PLEASE CONTACT ME
+
 # openssh
 [![Build Status](https://travis-ci.org/fonk/fonk-openssh.svg?branch=master)](https://travis-ci.org/fonk/fonk-openssh)
 
